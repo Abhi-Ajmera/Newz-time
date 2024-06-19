@@ -1,15 +1,16 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
-import ErrorPage from "./ErrorPage";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Home />,
-		errorElement: <ErrorPage />,
-	},
-]);
 const Root = () => {
-	return <RouterProvider router={router} />;
+	return (
+		<>
+			<Header />
+			<div className="px-6 py-2">
+				<Home />
+			</div>
+			<Footer />
+		</>
+	);
 };
 export default Root;
