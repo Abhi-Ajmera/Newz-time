@@ -77,7 +77,7 @@ export default function Header() {
 						Wishlist
 					</Link>
 					<Link
-						to="/"
+						to="/contact"
 						className="text-sm font-semibold leading-6"
 					>
 						Contact Us
@@ -92,11 +92,12 @@ export default function Header() {
 				onClose={setMobileMenuOpen}
 			>
 				<div className="fixed inset-0 z-10" />
-				<DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto text-white bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+				<DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto text-white bg-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
 					<div className="flex items-center justify-between">
 						<Link
 							to="/"
 							className="-m-1.5 p-1.5"
+							onClick={() => setMobileMenuOpen(false)}
 						>
 							<img
 								className="h-8 w-auto"
@@ -124,12 +125,14 @@ export default function Header() {
 								<Link
 									to="/"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-500"
+									onClick={() => setMobileMenuOpen(false)}
 								>
 									Wishlist
 								</Link>
 								<Link
-									to="/"
+									to="/contact"
 									className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-500"
+									onClick={() => setMobileMenuOpen(false)}
 								>
 									Contact Us
 								</Link>

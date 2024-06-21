@@ -5,11 +5,30 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { Provider } from "react-redux";
 import "./index.css";
 import Root from "./Root";
+import Contact from "./Contact";
+import ErrorPage from "./ErrorPage";
+import Home from "./Home";
+import Article from "./components/Article";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Root />,
+		errorElement: <ErrorPage />,
+		children: [
+			{
+				index: true,
+				element: <Home />,
+			},
+			{
+				path: "/contact",
+				element: <Contact />,
+			},
+			{
+				path: "/article",
+				element: <Article />,
+			},
+		],
 	},
 ]);
 
